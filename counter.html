@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    * {
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(images.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.first-row {
+    display: flex;
+}
+
+#plus,
+#minus,
+#reset {
+    background-color: rgb(1, 10, 11);
+    color: white;
+    padding: 9px 30px;
+    border: 2px groove rgb(18, 7, 87);
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    border-radius: 50px;
+
+}
+
+#reset {
+    margin-left: 8px;
+    margin-top: 10px;
+}
+
+#counter-wrap {
+    margin: auto;
+    margin-top: 50px;
+    height: auto;
+    align-items: center;
+
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#number {
+    font-size: 20px;
+    padding: 8px;
+    background-color: rgb(223, 126, 152);
+    border-radius: 50px;
+}
+</style>
+
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <div id="counter-wrap">
+            <div class="firsr-row">
+                <button id="plus">+</button>
+                <button id="number">0</button>
+
+                <button id="minus">-</button>
+            </div>
+            <button id="reset">RESET</button>
+        </div>
+    </div>
+
+    
+    <script>
+        let add = document.getElementById("plus");
+let remove = document.getElementById("minus");
+let reset = document.getElementById("reset");
+
+
+let num = document.getElementById("number");
+let count = 0;
+
+add.addEventListener('click', function () {
+    count++;
+    num.innerHTML = count;
+});
+
+remove.addEventListener('click', function () {
+    count--;
+    num.innerHTML = count;
+});
+reset.addEventListener('click', function () {
+    count = 0;
+    num.innerHTML = count;
+}); 
+    </script>
+
+
+
+</body>
+
+</html>
